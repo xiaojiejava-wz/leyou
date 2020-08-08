@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: item-service
+  datasource:
+    username: root
+    password: 144
+    url: jdbc:mysql://localhost:3306/leyou?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    hikari:
+      max-lifetime: 28770000
+      maximum-pool-size: 10
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+  instance:
+    lease-expiration-duration-in-seconds: 5
+    lease-renewal-interval-in-seconds: 10

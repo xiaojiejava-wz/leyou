@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+           background-color: aqua;
+        }
+    </style>
+
+</head>
+<body>
+    <script>
+    /*    for(var i=0;i<5;i++){
+            console.log(i);
+        }
+        console.log(i);*/
+    var print=function (obj) {
+        console.log(obj);
+    }
+    var print2=obj=>console.log(obj);
+    console.log(print2(55))
+        var sum=function (a,b) {
+            return a+b;
+        }
+        var sum2=(a,b)=>a+b;
+    console.log(sum2(1,2));
+
+    var sum3= (a,b)=>{
+        return a+b;
+    }
+
+    let person={
+     name:'jack',
+        eat:function (food) {
+            console.log(this.name + "正在吃" + food)
+        },
+        //简化为
+        eat2:food=>console.log(this.name + "正在吃" + food),
+     eat3(food){
+         console.log(this.name + "正在吃" + food);
+    }
+    }
+    console.log(person.eat3('饭'))
+        const person2= {
+        name:'jack',
+            age:21,
+            language:['java','js','css']
+        }
+        function hello(a) {
+            console.log("hello,"+a.name)
+        }
+        hello(person2)
+    </script>
+</body>
+</html>
